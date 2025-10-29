@@ -26,12 +26,23 @@
       <a href="/login" class="btn btn-outline-light">Login</a>
     </div>
   </header>
-  
-  <main class="container my-4">
-    <h2>Fish Log</h2>
-    <div id="postGrid" class="row g-3"></div>
-  </main>
 
+  <main class="container my-4">
+    <h2>Upload a Post!</h2>
+    <form id="uploadForm" class="mb-4">
+        <div class="mb-3">
+            <label for="fileInput" class="form-label">Upload Image</label>
+            <input type="file" class="form-control" id="fileInput" accept="image/*" required>
+        </div>
+        <div class="mb-3">
+            <label for="detailsInput" class="form-label">Details</label>
+            <textarea class="form-control" id="detailsInput" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+
+    </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
@@ -85,31 +96,7 @@
         simulateAI(e.target.dataset.id);
       }
     });
-
-    // Example posts
-    addPost(1, "Catch #1 Details", "image 1", [
-      "Weight:",
-      "Location:",
-      "Type:",
-      "Bait:",
-      "Notes:"
-    ]);
-
-    addPost(2, "Catch #2 Details", "image 2", [
-      "Weight:",
-      "Location:",
-      "Type:",
-      "Bait:",
-      "Notes:"
-    ]);
-
-    addPost(3, "Catch #3 Details", "image 3", [
-      "Weight:",
-      "Location:",
-      "Type:",
-      "Bait:",
-      "Notes:"
-    ]);
+    
   </script>
 
 </body>
